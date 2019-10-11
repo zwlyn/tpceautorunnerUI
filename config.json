@@ -1,0 +1,13 @@
+{
+    "ip": "192.168.3.58",
+    "dingdingTime": 6,
+    "mapBedUrl": "http://39.97.226.213:18800/upload",
+    "errorTime": 600,
+    "dingdingUrl": [
+        "https://oapi.dingtalk.com/robot/send?access_token=99c37364ccd38d5bbec915e20d335bc5aa6b8ef0acb753cf246dd629f75892e1",
+        "https://oapi.dingtalk.com/robot/send?access_token=953de9ead73eb63b0e57351ae17701b18221da4a0769ef5aa2e072ec8dd7e369"
+    ],
+    "reportLanguage": "CH",
+    "port": 8642,
+    "resultTime": 10
+}

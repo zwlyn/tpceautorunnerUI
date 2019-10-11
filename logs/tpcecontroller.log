@@ -1,0 +1,91 @@
+2019-10-10 15:21:31,699     INFO [                  work.py       start_clicked   482] 点击了启动item，开始启动 ～～
+2019-10-10 15:21:31,700     INFO [                  work.py          handlePlot   552] handlePlot
+2019-10-10 15:21:31,807     INFO [                  work.py          handlePlot   564] 绘图更新成功！
+2019-10-10 15:21:34,908     INFO [                  work.py          handlePlot   564] 绘图更新成功！
+2019-10-10 15:21:37,991     INFO [                  work.py          handlePlot   564] 绘图更新成功！
+2019-10-10 15:21:41,071     INFO [                  work.py          handlePlot   564] 绘图更新成功！
+2019-10-10 15:21:44,176     INFO [                  work.py          handlePlot   564] 绘图更新成功！
+2019-10-10 15:21:47,277     INFO [                  work.py          handlePlot   564] 绘图更新成功！
+2019-10-10 15:21:50,394     INFO [                  work.py          handlePlot   564] 绘图更新成功！
+2019-10-10 15:21:53,472     INFO [                  work.py          handlePlot   564] 绘图更新成功！
+2019-10-10 15:21:56,560     INFO [                  work.py          handlePlot   564] 绘图更新成功！
+2019-10-10 15:21:59,641     INFO [                  work.py          handlePlot   564] 绘图更新成功！
+2019-10-10 15:22:02,729     INFO [                  work.py          handlePlot   564] 绘图更新成功！
+2019-10-10 15:22:02,750     INFO [                  work.pymodify_agent_instance   400] self.sender().text():  1
+2019-10-10 15:22:03,357     INFO [                  work.pymodify_agent_concurrency   394] self.sender().text():  1
+2019-10-10 15:22:03,964     INFO [                  work.py   modify_agent_port   384] self.sender().text():  1
+2019-10-10 15:22:04,469     INFO [                  work.py     modify_agent_ip   378] self.sender().text():  1
+2019-10-10 15:22:05,166     INFO [                  work.pymodify_agent_startid   406] self.sender().text():  1
+2019-10-10 15:22:05,701     INFO [                  work.py  modify_agent_endid   412] self.sender().text():  1
+2019-10-10 15:22:05,837     INFO [                  work.py          handlePlot   564] 绘图更新成功！
+2019-10-10 15:22:06,244     INFO [                  work.py  modify_agent_delay   418] self.sender().text():  1
+2019-10-10 15:22:08,913     INFO [                  work.py          handlePlot   564] 绘图更新成功！
+2019-10-10 15:22:12,037     INFO [                  work.py          handlePlot   564] 绘图更新成功！
+2019-10-10 15:22:15,166     INFO [                  work.py          handlePlot   564] 绘图更新成功！
+2019-10-10 15:22:18,230     INFO [                  work.py          handlePlot   564] 绘图更新成功！
+2019-10-10 15:22:20,623     INFO [                  work.py          closeEvent   146] 改变已经保存
+2019-10-10 15:22:21,317     INFO [                  work.py          handlePlot   564] 绘图更新成功！
+2019-10-10 15:48:13,118     INFO [                  work.py       start_clicked   481] 点击了启动item，开始启动 ～～
+2019-10-10 15:48:13,119     INFO [                  work.py          handlePlot   551] handlePlot
+2019-10-10 15:48:13,204     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:48:16,287     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:48:19,366     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:48:22,474     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:48:25,588     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:48:28,693     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:48:31,801     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:48:34,917     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:48:38,013     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:48:41,132     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:48:44,221     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:48:47,305     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:48:50,387     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:48:53,479     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:48:56,588     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:48:59,663     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:49:02,758     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:49:05,840     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:49:08,936     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:49:12,020     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:49:15,099     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:49:18,183     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:49:21,278     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:49:24,357     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:49:27,440     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:49:30,526     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:49:33,614     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:49:36,685     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:49:39,786     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:49:42,892     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:49:45,990     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:49:49,103     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:49:52,210     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:49:55,281     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:49:58,361     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:50:01,475     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:50:04,595     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:50:07,712     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:50:10,832     INFO [                  work.py          handlePlot   563] 绘图更新成功！
+2019-10-10 15:50:11,601     INFO [                  work.py    modify_startArgs   327] modify_startArgs!!
+2019-10-10 15:50:12,241     INFO [                  work.py    modify_startArgs   327] modify_startArgs!!
+2019-10-10 15:50:13,025     INFO [                  work.py    modify_startArgs   327] modify_startArgs!!
+2019-10-10 15:50:13,824     INFO [                  work.py    modify_startArgs   327] modify_startArgs!!
+2019-10-10 15:50:21,988     INFO [                  work.pymodify_agent_concurrency   393] self.sender().text():  
+2019-10-10 15:50:29,079     INFO [                  work.py   modify_configArgs   424] modify_configArgs!!
+2019-10-10 15:50:29,545     INFO [                  work.py   modify_configArgs   424] modify_configArgs!!
+2019-10-10 15:51:47,402     INFO [                  work.py   modify_agent_port   383] self.sender().text():  t
+2019-10-10 15:52:34,892     INFO [                  work.py          closeEvent   145] 改变已经保存
+2019-10-10 16:16:56,382     INFO [                  work.py        modify_agent   373] self.sender().text():  1
+2019-10-10 16:16:56,568     INFO [                  work.py        modify_agent   373] self.sender().text():  11
+2019-10-10 16:16:56,769     INFO [                  work.py        modify_agent   373] self.sender().text():  111
+2019-10-10 16:16:58,384     INFO [                  work.py        modify_agent   373] self.sender().text():  1
+2019-10-10 16:16:58,600     INFO [                  work.py        modify_agent   373] self.sender().text():  11
+2019-10-10 16:16:58,752     INFO [                  work.py        modify_agent   373] self.sender().text():  111
+2019-10-10 16:17:01,016     INFO [                  work.py        modify_agent   373] self.sender().text():  1
+2019-10-10 16:17:01,192     INFO [                  work.py        modify_agent   373] self.sender().text():  11
+2019-10-10 16:17:01,360     INFO [                  work.py        modify_agent   373] self.sender().text():  111
+2019-10-10 16:17:04,416     INFO [                  work.py        modify_agent   373] self.sender().text():  01
+2019-10-10 16:17:04,592     INFO [                  work.py        modify_agent   373] self.sender().text():  011
+2019-10-10 16:17:05,840     INFO [                  work.py        modify_agent   373] self.sender().text():  01
+2019-10-10 16:17:06,048     INFO [                  work.py        modify_agent   373] self.sender().text():  0
+2019-10-10 16:17:06,497     INFO [                  work.py        modify_agent   373] self.sender().text():  
