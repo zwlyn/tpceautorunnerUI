@@ -12,10 +12,8 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 
-import random
 from log import logger
 #from TPCEAutoRunner import tpceautorunner, TwoHouerTradeResultJob
-from threading import Thread
 from .plotBox import PlotBox
 from .settingBox import SettingBox
 from log import logger
