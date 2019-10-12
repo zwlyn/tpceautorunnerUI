@@ -82,3 +82,5 @@ class ConfigBox(QWidget):
             self.config_map['dingdingTime'] = int(self.configArgs['dingdingTime'].text())
             self.config_map['resultTime'] = int(self.configArgs['resultTime'].text())
             self.config_map['errorTime'] = int(self.configArgs['errorTime'].text())
+
+        signalManager.configArgsChanged.emit(self.config_map)

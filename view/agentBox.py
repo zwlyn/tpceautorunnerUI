@@ -97,6 +97,8 @@ class AgentBox(QWidget):
 			}
 			self.start_map['agents'].append(new_agent)
 
+			signalManager.startArgsChanged.emit(self.start_map)
+
 	def remove_agent(self):
 		'''
 		每次删除最后一个agent
@@ -112,13 +114,21 @@ class AgentBox(QWidget):
 		currentItem = self.listAgent.currentItem()
 		agentid = int(currentItem.text()[5:]) -1
 		self.start_map['agents'][agentid]['ip'] = self.agentArgs['ip'].text()
-		if self.agentArgs['port'].text() != '':
+
+		if self.agentArgs['port'].text() != "":
 			self.start_map['agents'][agentid]['port'] = int(self.agentArgs['port'].text())
+		if self.agentArgs['concurrency'].text() != "":
 			self.start_map['agents'][agentid]['concurrency'] = int(self.agentArgs['concurrency'].text())
+		if self.agentArgs['instance'].text() != "":
 			self.start_map['agents'][agentid]['instance'] = int(self.agentArgs['instance'].text())
+		if self.agentArgs['startid'].text() != "":
 			self.start_map['agents'][agentid]['startid'] = int(self.agentArgs['startid'].text())
+		if self.agentArgs['endid'].text() != "":
 			self.start_map['agents'][agentid]['endid'] = int(self.agentArgs['endid'].text())
+		if self.agentArgs['delay'].text() != "":
 			self.start_map['agents'][agentid]['delay'] = int(self.agentArgs['delay'].text())
+
+			signalManager.startArgsChanged.emit(self.start_map)
 
 	def select_agent(self, item):
 

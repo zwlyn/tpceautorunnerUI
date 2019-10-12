@@ -20,21 +20,16 @@ class SettingBox(QWidget):
         pass
 
     def initUI(self):
-
-
         self.mainLayout = QVBoxLayout()
         self.mainTab = QTabWidget()
 
-        startTab = StartBox()
-        configTab = ConfigBox()
+        self.startTab = StartBox()
+        self.configTab = ConfigBox()
         
-        self.mainTab.addTab(startTab, '启动参数')
-        self.mainTab.addTab(configTab, '配置参数')
+        self.mainTab.addTab(self.startTab, '启动参数')
+        self.mainTab.addTab(self.configTab, '配置参数')
 
         self.mainLayout.addWidget(self.mainTab)
-
-
-
 
         self.setLayout(self.mainLayout)
 

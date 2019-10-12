@@ -8,27 +8,20 @@ from log import logger
 
 class TpceApp(object):
 
-	def __init__(self):
-		super(TpceApp, self).__init__()
-		self.initView()
-		self.initControllers()
-		self.initConnect()
+    def __init__(self):
+        super(TpceApp, self).__init__()
+        self.initView()
+        self.initControllers()
+        self.initConnect()
 
-	def initView(self):
-		self.tpceautorunnerUI = TPCEAutoRunnerUI()
+    def initView(self):
+        self.tpceautorunnerUI = TPCEAutoRunnerUI()
 
-	def initControllers(self):
-		pass		
-		# self.acontroller = AController()
-		# self.bcontroller = BController()
-		# self.ccontroller = CController()
+    def initControllers(self):
+        self.saveController = SaveController()
 
-		# logger.info(self.acontroller)
-		# logger.info(self.bcontroller)
-		# logger.info(self.ccontroller)
+    def initConnect(self):
+        pass
 
-	def initConnect(self):
-		pass
-
-	def show(self):
-		self.tpceautorunnerUI.show()
+    def show(self):
+        self.tpceautorunnerUI.show()

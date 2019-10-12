@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # -*- coding-utf_8 -*-
+import time
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
@@ -8,6 +9,7 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FC
 from log import logger
 from app import signalManager
+from threading import Thread
 
 class PlotBox(QWidget):
 
@@ -32,7 +34,12 @@ class PlotBox(QWidget):
         self.setLayout(layout)
 
     def initConnect(self):
-        pass
+        signalManager.startTest.connect(self.plot_solt)
+
+    def plot_solt(self): 
+        #tpceautorunner.run_back()
+        poltThread = Thread(target = self.handlePlot)
+        poltThread.start()
 
     def handlePlot(self):
         logger.info('handlePlot')
@@ -109,3 +116,33 @@ class PlotBox(QWidget):
 
     def savefig(self, path):
         self.plt.savefig(path)
+
+    # def handlePlot(self):
+    #     def actionShot():
+    #         self.lastPng = os.sep.join([tpceautorunner.paths["screenshots"], tpceautorunner.resultName(int(tpceautorunner.lastResultTime), "jpg")])
+    #         plt.savefig(self.lastPng)
+    #         logger.info(u'截图%s保存成功！' % self.lastPng)
+
+    #     while True: # ------------
+    #         try:
+    #             if tpceautorunner.isStarted and tpceautorunner.isGetResultSuccessed:
+    #                 _minCount = min(len(tpceautorunner.times),len(tpceautorunner.tpsEs))
+    #                 minCount  =  _minCount
+    #                 self.plot(tpceautorunner.times[0:minCount], tpceautorunner.tpsEs[0:minCount])
+    #                 job = TwoHouerTradeResultJob.BestJob
+    #                 if job:
+    #                     self.drawMIStartEnd(job)
+
+    #                 plt.pause(int(self.config_map['resultTime']))  #暂停一秒
+    #                 plt.ioff()
+    #                 logger.info(u'绘图更新成功！')
+    #                 if  len(tpceautorunner.tpsEs) > 0:
+    #                     actionShot()
+
+    #                 if is_exit:
+    #                     actionShot()
+
+    #         except Exception as e:
+    #             logger.error(traceback.format_exc(e))
+    #             logger.error(u'绘图更新失败')
+    #             logger.error(repr(e))

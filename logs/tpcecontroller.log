@@ -105,3 +105,147 @@
 2019-10-12 15:24:02,920     INFO [            mainwindow.py          closeEvent   137] 改变已经保存
 2019-10-12 15:33:26,251     INFO [            mainwindow.py          closeEvent   137] 改变已经保存
 2019-10-12 15:41:16,701     INFO [            mainwindow.py          closeEvent   137] 改变已经保存
+2019-10-12 16:03:03,429     INFO [            mainwindow.py          closeEvent   137] 改变已经保存
+2019-10-12 17:07:23,589     INFO [              startBox.py    modify_startArgs   100] modify_startArgs!!
+2019-10-12 17:07:29,111     INFO [            mainwindow.py          closeEvent   129] 正在关闭APP
+2019-10-12 17:07:44,073     INFO [             configBox.py   modify_configArgs    74] modify_configArgs!!
+2019-10-12 17:08:21,588     INFO [              startBox.py    modify_startArgs   100] modify_startArgs!!
+2019-10-12 17:08:23,265     INFO [             configBox.py   modify_configArgs    74] modify_configArgs!!
+2019-10-12 17:08:24,466     INFO [            mainwindow.py          closeEvent   129] 正在关闭APP
+2019-10-12 17:08:32,375     INFO [            mainwindow.py          closeEvent   129] 正在关闭APP
+2019-10-12 17:10:28,616     INFO [              startBox.py    modify_startArgs   100] modify_startArgs!!
+2019-10-12 17:10:30,518     INFO [              startBox.py    modify_startArgs   100] modify_startArgs!!
+2019-10-12 17:10:33,454     INFO [             configBox.py   modify_configArgs    74] modify_configArgs!!
+2019-10-12 17:10:34,495     INFO [             configBox.py   modify_configArgs    74] modify_configArgs!!
+2019-10-12 17:10:51,410     INFO [            mainwindow.py          closeEvent   129] 正在关闭APP
+2019-10-12 17:13:29,823     INFO [              startBox.py    modify_startArgs   100] modify_startArgs!!
+2019-10-12 17:13:29,824     INFO [        saveController.py      save_startArgs    27] saving startArgs!!
+2019-10-12 17:13:32,487     INFO [              startBox.py    modify_startArgs   100] modify_startArgs!!
+2019-10-12 17:13:32,487     INFO [        saveController.py      save_startArgs    27] saving startArgs!!
+2019-10-12 17:13:34,835     INFO [            mainwindow.py          closeEvent   129] 正在关闭APP
+2019-10-12 17:13:40,995     INFO [            mainwindow.py          closeEvent   129] 正在关闭APP
+2019-10-12 17:15:11,393     INFO [              startBox.py    modify_startArgs   100] modify_startArgs!!
+2019-10-12 17:15:11,393     INFO [        saveController.py      save_startArgs    27] saving startArgs!!
+2019-10-12 17:15:11,638     INFO [              startBox.py    modify_startArgs   100] modify_startArgs!!
+2019-10-12 17:15:11,639     INFO [        saveController.py      save_startArgs    27] saving startArgs!!
+2019-10-12 17:15:21,192     INFO [             configBox.py   modify_configArgs    74] modify_configArgs!!
+2019-10-12 17:15:21,193     INFO [        saveController.py     save_configArgs    34] save_configArgs!!
+2019-10-12 17:15:21,416     INFO [             configBox.py   modify_configArgs    74] modify_configArgs!!
+2019-10-12 17:15:21,417     INFO [        saveController.py     save_configArgs    34] save_configArgs!!
+2019-10-12 17:15:23,856     INFO [              startBox.py    modify_startArgs   100] modify_startArgs!!
+2019-10-12 17:15:23,856     INFO [        saveController.py      save_startArgs    27] saving startArgs!!
+2019-10-12 17:15:24,075     INFO [              startBox.py    modify_startArgs   100] modify_startArgs!!
+2019-10-12 17:15:24,077     INFO [        saveController.py      save_startArgs    27] saving startArgs!!
+2019-10-12 17:15:29,153     INFO [              agentBox.py        modify_agent   111] self.sender().text():  192.168.3.5811
+2019-10-12 17:15:29,154     INFO [        saveController.py      save_startArgs    27] saving startArgs!!
+2019-10-12 17:15:34,180     INFO [            mainwindow.py          closeEvent   129] 正在关闭APP
+2019-10-12 17:15:49,906     INFO [              agentBox.py        modify_agent   111] self.sender().text():  192.168.3.5811
+2019-10-12 17:15:49,907     INFO [        saveController.py      save_startArgs    27] saving startArgs!!
+2019-10-12 17:15:54,174     INFO [            mainwindow.py          closeEvent   129] 正在关闭APP
+2019-10-12 17:18:10,310     INFO [        saveController.py      save_startArgs    27] saving startArgs!!
+2019-10-12 17:18:19,095     INFO [              agentBox.py        modify_agent   113] self.sender().text():  192.168.3.58
+2019-10-12 17:18:19,096     INFO [        saveController.py      save_startArgs    27] saving startArgs!!
+2019-10-12 17:18:26,279     INFO [              agentBox.py        modify_agent   113] self.sender().text():  11
+2019-10-12 17:18:29,192     INFO [        saveController.py      save_startArgs    27] saving startArgs!!
+2019-10-12 17:18:33,259     INFO [            mainwindow.py          closeEvent   129] 正在关闭APP
+2019-10-12 17:18:33,327     INFO [              agentBox.py        modify_agent   113] self.sender().text():  11
+2019-10-12 17:18:46,614     INFO [            mainwindow.py          closeEvent   129] 正在关闭APP
+2019-10-12 17:18:46,648     INFO [              agentBox.py        modify_agent   113] self.sender().text():  11
+2019-10-12 17:18:57,774     INFO [            mainwindow.py          closeEvent   129] 正在关闭APP
+2019-10-12 17:18:57,849     INFO [              agentBox.py        modify_agent   113] self.sender().text():  
+2019-10-12 17:19:06,059     INFO [              agentBox.py        modify_agent   113] self.sender().text():  42901
+2019-10-12 17:19:06,060     INFO [        saveController.py      save_startArgs    27] saving startArgs!!
+2019-10-12 17:19:06,258     INFO [              agentBox.py        modify_agent   113] self.sender().text():  429011
+2019-10-12 17:19:06,259     INFO [        saveController.py      save_startArgs    27] saving startArgs!!
+2019-10-12 17:19:06,939     INFO [              agentBox.py        modify_agent   113] self.sender().text():  42901
+2019-10-12 17:19:06,939     INFO [        saveController.py      save_startArgs    27] saving startArgs!!
+2019-10-12 17:19:07,146     INFO [              agentBox.py        modify_agent   113] self.sender().text():  4290
+2019-10-12 17:19:07,147     INFO [        saveController.py      save_startArgs    27] saving startArgs!!
+2019-10-12 17:19:09,707     INFO [              agentBox.py        modify_agent   113] self.sender().text():  1
+2019-10-12 17:19:09,898     INFO [              agentBox.py        modify_agent   113] self.sender().text():  11
+2019-10-12 17:19:11,442     INFO [              agentBox.py        modify_agent   113] self.sender().text():  1
+2019-10-12 17:19:11,666     INFO [              agentBox.py        modify_agent   113] self.sender().text():  
+2019-10-12 17:19:15,847     INFO [            mainwindow.py          closeEvent   129] 正在关闭APP
+2019-10-12 17:19:15,891     INFO [              agentBox.py        modify_agent   113] self.sender().text():  1111
+2019-10-12 17:19:35,815     INFO [              agentBox.py        modify_agent   113] self.sender().text():  
+2019-10-12 17:19:41,685     INFO [              agentBox.py        modify_agent   113] self.sender().text():  2
+2019-10-12 17:19:42,342     INFO [              agentBox.py        modify_agent   113] self.sender().text():  2
+2019-10-12 17:21:03,877     INFO [              agentBox.py        modify_agent   113] self.sender().text():  1
+2019-10-12 17:24:02,090     INFO [              agentBox.py        modify_agent   113] self.sender().text():  1
+2019-10-12 17:24:02,897     INFO [              agentBox.py        modify_agent   113] self.sender().text():  1
+2019-10-12 17:24:03,698     INFO [              agentBox.py        modify_agent   113] self.sender().text():  1
+2019-10-12 17:24:07,099     INFO [              agentBox.py        modify_agent   113] self.sender().text():  2
+2019-10-12 17:24:07,883     INFO [              agentBox.py        modify_agent   113] self.sender().text():  2
+2019-10-12 17:24:08,611     INFO [              agentBox.py        modify_agent   113] self.sender().text():  2
+2019-10-12 17:24:09,403     INFO [              agentBox.py        modify_agent   113] self.sender().text():  2
+2019-10-12 17:24:10,252     INFO [              agentBox.py        modify_agent   113] self.sender().text():  2
+2019-10-12 17:24:11,004     INFO [              agentBox.py        modify_agent   113] self.sender().text():  2
+2019-10-12 17:24:11,798     INFO [              agentBox.py        modify_agent   113] self.sender().text():  2
+2019-10-12 17:24:11,798     INFO [        saveController.py      save_startArgs    27] saving startArgs!!
+2019-10-12 17:24:14,774     INFO [              agentBox.py        modify_agent   113] self.sender().text():  3
+2019-10-12 17:24:15,534     INFO [              agentBox.py        modify_agent   113] self.sender().text():  3
+2019-10-12 17:24:16,349     INFO [              agentBox.py        modify_agent   113] self.sender().text():  3
+2019-10-12 17:24:17,262     INFO [              agentBox.py        modify_agent   113] self.sender().text():  3
+2019-10-12 17:24:18,102     INFO [              agentBox.py        modify_agent   113] self.sender().text():  3
+2019-10-12 17:24:18,942     INFO [              agentBox.py        modify_agent   113] self.sender().text():  3
+2019-10-12 17:24:19,823     INFO [              agentBox.py        modify_agent   113] self.sender().text():  3
+2019-10-12 17:24:19,824     INFO [        saveController.py      save_startArgs    27] saving startArgs!!
+2019-10-12 17:24:38,281     INFO [             configBox.py   modify_configArgs    74] modify_configArgs!!
+2019-10-12 17:24:38,282     INFO [        saveController.py     save_configArgs    34] save_configArgs!!
+2019-10-12 17:24:39,833     INFO [             configBox.py   modify_configArgs    74] modify_configArgs!!
+2019-10-12 17:24:39,834     INFO [        saveController.py     save_configArgs    34] save_configArgs!!
+2019-10-12 17:24:40,105     INFO [             configBox.py   modify_configArgs    74] modify_configArgs!!
+2019-10-12 17:24:40,105     INFO [        saveController.py     save_configArgs    34] save_configArgs!!
+2019-10-12 17:24:40,377     INFO [             configBox.py   modify_configArgs    74] modify_configArgs!!
+2019-10-12 17:24:40,377     INFO [        saveController.py     save_configArgs    34] save_configArgs!!
+2019-10-12 17:24:41,969     INFO [             configBox.py   modify_configArgs    74] modify_configArgs!!
+2019-10-12 17:24:41,970     INFO [        saveController.py     save_configArgs    34] save_configArgs!!
+2019-10-12 17:24:42,937     INFO [             configBox.py   modify_configArgs    74] modify_configArgs!!
+2019-10-12 17:24:42,937     INFO [        saveController.py     save_configArgs    34] save_configArgs!!
+2019-10-12 17:24:44,409     INFO [             configBox.py   modify_configArgs    74] modify_configArgs!!
+2019-10-12 17:24:44,410     INFO [        saveController.py     save_configArgs    34] save_configArgs!!
+2019-10-12 17:24:46,289     INFO [             configBox.py   modify_configArgs    74] modify_configArgs!!
+2019-10-12 17:24:46,289     INFO [        saveController.py     save_configArgs    34] save_configArgs!!
+2019-10-12 17:24:53,553     INFO [             configBox.py   modify_configArgs    74] modify_configArgs!!
+2019-10-12 17:24:53,554     INFO [        saveController.py     save_configArgs    34] save_configArgs!!
+2019-10-12 17:24:54,592     INFO [             configBox.py   modify_configArgs    74] modify_configArgs!!
+2019-10-12 17:24:54,593     INFO [        saveController.py     save_configArgs    34] save_configArgs!!
+2019-10-12 17:24:56,104     INFO [             configBox.py   modify_configArgs    74] modify_configArgs!!
+2019-10-12 17:24:56,104     INFO [        saveController.py     save_configArgs    34] save_configArgs!!
+2019-10-12 17:24:56,856     INFO [             configBox.py   modify_configArgs    74] modify_configArgs!!
+2019-10-12 17:24:56,856     INFO [        saveController.py     save_configArgs    34] save_configArgs!!
+2019-10-12 17:24:58,352     INFO [             configBox.py   modify_configArgs    74] modify_configArgs!!
+2019-10-12 17:25:15,998     INFO [            mainwindow.py       start_clicked   141] 点击了启动item，开始启动 ～～
+2019-10-12 17:25:31,280     INFO [            mainwindow.py          closeEvent   129] 正在关闭APP
+2019-10-12 17:35:53,985     INFO [            mainwindow.py       start_clicked   141] 点击了启动item，开始启动 ～～
+2019-10-12 17:36:42,324     INFO [            mainwindow.py       start_clicked   141] 点击了启动item，开始启动 ～～
+2019-10-12 17:36:42,326     INFO [               plotBox.py          handlePlot    44] handlePlot
+2019-10-12 17:36:42,592     INFO [               plotBox.py          handlePlot    56] 绘图更新成功！
+2019-10-12 17:36:45,569     INFO [            mainwindow.py          closeEvent   129] 正在关闭APP
+2019-10-12 17:37:01,309     INFO [            mainwindow.py       start_clicked   141] 点击了启动item，开始启动 ～～
+2019-10-12 17:37:01,316     INFO [               plotBox.py          handlePlot    45] handlePlot
+2019-10-12 17:37:01,710     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！
+2019-10-12 17:37:04,858     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！
+2019-10-12 17:37:08,007     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！
+2019-10-12 17:37:11,164     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！
+2019-10-12 17:37:14,326     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！
+2019-10-12 17:37:17,488     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！
+2019-10-12 17:37:20,643     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！
+2019-10-12 17:37:23,769     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！
+2019-10-12 17:37:26,898     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！
+2019-10-12 17:37:30,029     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！
+2019-10-12 17:37:33,149     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！
+2019-10-12 17:37:36,305     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！
+2019-10-12 17:37:39,449     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！
+2019-10-12 17:37:42,602     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！
+2019-10-12 17:37:45,961     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！
+2019-10-12 17:37:49,217     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！
+2019-10-12 17:37:52,500     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！
+2019-10-12 17:37:55,672     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！
+2019-10-12 17:37:58,919     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！
+2019-10-12 17:38:02,185     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！
+2019-10-12 17:38:05,449     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！
+2019-10-12 17:38:08,789     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！
+2019-10-12 17:38:12,019     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！
+2019-10-12 17:38:12,209     INFO [            mainwindow.py          closeEvent   129] 正在关闭APP
+2019-10-12 17:38:15,200     INFO [               plotBox.py          handlePlot    57] 绘图更新成功！

@@ -99,10 +99,10 @@ class TPCEAutoRunnerUI(QDialog):  # 需要研究example 之后使用QMainWindows
         self.leftlist.itemClicked.connect(self.start_clicked)
         self.leftlist.currentRowChanged.connect(self.display)
 
-        # 每3秒存储一次结果
-        self.timer = QTimer(self)
-        self.timer.timeout.connect(self.save_date)
-        self.timer.start(3000)
+        # # 每3秒存储一次结果
+        # self.timer = QTimer(self)
+        # self.timer.timeout.connect(self.save_date)
+        # self.timer.start(3000)
 
     def init_reportBox(self):
         layout = QHBoxLayout()
@@ -123,18 +123,10 @@ class TPCEAutoRunnerUI(QDialog):  # 需要研究example 之后使用QMainWindows
         layout.addWidget(tab_list)
         self.reportBox.setLayout(layout)
         
-    def save_date(self):
-        pass
-        # with open('start.json', 'w') as f:
-        #     f.write(json.dumps(self.start_map, indent=4))
-        # with open('config.json', 'w') as f:
-        #     f.write(json.dumps(self.config_map, indent=4))
 
     # 关闭窗口时会执行累的close方法，并触发QCloseEvent信号，进而执行closeEvent(self,QCloseEvent)方法
     def closeEvent(self, event):
-        # 退出前对内存中的改变进行存储
-        self.save_date()
-        logger.info('改变已经保存')
+        logger.info('正在关闭APP')
         reply = QMessageBox.question(self, '本程序',
                                            "是否要退出程序？",
                                            QMessageBox.Yes | QMessageBox.No,
@@ -148,46 +140,13 @@ class TPCEAutoRunnerUI(QDialog):  # 需要研究example 之后使用QMainWindows
         if item.text() == '启动':
             logger.info('点击了启动item，开始启动 ～～')
 
-            #tpceautorunner.run_back()
-            poltThread = Thread(target = self.handlePlot)
-            poltThread.start()
+            signalManager.startTest.emit()
 
-            # # 当获得循环完毕的信号时，停止计数
-            # # work.trigger.connect(timeStop)
     def display(self,i):
         #设置当前可见的选项卡的索引
         self.stack.setCurrentIndex(i)
 
 
-    # def handlePlot(self):
-    #     def actionShot():
-    #         self.lastPng = os.sep.join([tpceautorunner.paths["screenshots"], tpceautorunner.resultName(int(tpceautorunner.lastResultTime), "jpg")])
-    #         plt.savefig(self.lastPng)
-    #         logger.info(u'截图%s保存成功！' % self.lastPng)
-
-    #     while True: # ------------
-    #         try:
-    #             if tpceautorunner.isStarted and tpceautorunner.isGetResultSuccessed:
-    #                 _minCount = min(len(tpceautorunner.times),len(tpceautorunner.tpsEs))
-    #                 minCount  =  _minCount
-    #                 self.plot(tpceautorunner.times[0:minCount], tpceautorunner.tpsEs[0:minCount])
-    #                 job = TwoHouerTradeResultJob.BestJob
-    #                 if job:
-    #                     self.drawMIStartEnd(job)
-
-    #                 plt.pause(int(self.config_map['resultTime']))  #暂停一秒
-    #                 plt.ioff()
-    #                 logger.info(u'绘图更新成功！')
-    #                 if  len(tpceautorunner.tpsEs) > 0:
-    #                     actionShot()
-
-    #                 if is_exit:
-    #                     actionShot()
-
-    #         except Exception as e:
-    #             logger.error(traceback.format_exc(e))
-    #             logger.error(u'绘图更新失败')
-    #             logger.error(repr(e))
 
 
 

@@ -5,9 +5,11 @@ from PyQt5.QtCore import *
 
 class SignalManager(QObject):
 
-    buttonClicked = pyqtSignal(str) # view发送到controller
+    startTest = pyqtSignal() 
 
-    nameChanged = pyqtSignal(str) # controller发送回View
+    startArgsChanged = pyqtSignal(dict)
+
+    configArgsChanged = pyqtSignal(dict)
 
     def __init__(self):
         super(SignalManager, self).__init__()

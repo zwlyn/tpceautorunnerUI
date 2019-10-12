@@ -111,3 +111,5 @@ class StartBox(QWidget):
         self.start_map['dbconfig']['username'] = self.startArgs['dbconfig']['username'].text()
         self.start_map['dbconfig']['dbtype'] = self.startArgs['dbconfig']['dbtype'].text()
         self.start_map['dbconfig']['password'] = self.startArgs['dbconfig']['password'].text()
+
+        signalManager.startArgsChanged.emit(self.start_map)
