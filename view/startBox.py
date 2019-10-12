@@ -1,21 +1,27 @@
 #!/usr/bin/python3
 # -*- coding-utf_8 -*-
+import json
 from log import logger
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from app import signalManager
-from .agentLayout import AgentLayout
+from .agentBox import AgentBox
+
+def load_json(fpath):
+    with open(fpath,'r', encoding='utf-8') as f:
+        dict_data = json.loads(f.read())
+    return dict_data
 
 class StartBox(QWidget):
 
-	def __init__(self, parent=None):
-		super(StartBox,self).__init__(parent)
-		self.initData()
-		self.initUI()
-		self.initConnect()
+    def __init__(self, parent=None):
+        super(StartBox,self).__init__(parent)
+        self.initData()
+        self.initUI()
+        self.initConnect()
 
-	def initData(self):
+    def initData(self):
         self.start_map = load_json('start.json')
         self.startArgs = {
         'customer': QLineEdit(),
@@ -34,7 +40,7 @@ class StartBox(QWidget):
         }
         }
 
-	def initUI(self): 
+    def initUI(self): 
         layout = QHBoxLayout()
         layout_args = QFormLayout()
 
@@ -65,15 +71,17 @@ class StartBox(QWidget):
         layout_args.addRow(QLabel("数据库实例名:"), self.startArgs['dbconfig']['dbname'])
         layout_args.addRow(QLabel("数据库类别:"), self.startArgs['dbconfig']['dbtype'])
 
-        agent = layoutAgent()
+        agentBox = AgentBox()
                
-        layout.addLayout(layoutL)
-        layout.addWidget(agent)
+        layout.addLayout(layout_args)
+        layout.addWidget(agentBox)
+
+        self.setLayout(layout)
 
 
         # 将startBox放入标签中
 
-	def initConnect(self):
+    def initConnect(self):
         # 设置start的信号糟，当行内容修改结束时进行修改
         self.startArgs['customer'].textEdited.connect(self.modify_startArgs)     
         self.startArgs['initialdays'].textEdited.connect(self.modify_startArgs)  
@@ -86,3 +94,20 @@ class StartBox(QWidget):
         self.startArgs['dbconfig']['password'].textEdited.connect(self.modify_startArgs)
         self.startArgs['dbconfig']['dbname'].textEdited.connect(self.modify_startArgs)
         self.startArgs['dbconfig']['dbtype'].textEdited.connect(self.modify_startArgs) 
+
+
+    def modify_startArgs(self):
+        logger.info('modify_startArgs!!')
+
+        self.start_map['customer'] = int(self.startArgs['customer'].text())
+        self.start_map['testtime'] = int(self.startArgs['testtime'].text())
+        self.start_map['initialdays'] = int(self.startArgs['initialdays'].text())
+        self.start_map['scalefactor'] = int(self.startArgs['scalefactor'].text())
+        self.start_map['uptime'] = int(self.startArgs['uptime'].text())
+
+        self.start_map['dbconfig']['ip'] = self.startArgs['dbconfig']['ip'].text()
+        self.start_map['dbconfig']['port'] = int(self.startArgs['dbconfig']['port'].text())
+        self.start_map['dbconfig']['dbname'] = self.startArgs['dbconfig']['dbname'].text()
+        self.start_map['dbconfig']['username'] = self.startArgs['dbconfig']['username'].text()
+        self.start_map['dbconfig']['dbtype'] = self.startArgs['dbconfig']['dbtype'].text()
+        self.start_map['dbconfig']['password'] = self.startArgs['dbconfig']['password'].text()

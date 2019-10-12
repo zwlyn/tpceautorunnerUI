@@ -89,3 +89,19 @@
 2019-10-10 16:17:05,840     INFO [                  work.py        modify_agent   373] self.sender().text():  01
 2019-10-10 16:17:06,048     INFO [                  work.py        modify_agent   373] self.sender().text():  0
 2019-10-10 16:17:06,497     INFO [                  work.py        modify_agent   373] self.sender().text():  
+2019-10-12 15:11:05,878     INFO [            mainwindow.py       start_clicked   146] 点击了启动item，开始启动 ～～
+2019-10-12 15:11:14,658     INFO [            mainwindow.py          closeEvent   134] 改变已经保存
+2019-10-12 15:15:10,947     INFO [            mainwindow.py       start_clicked   146] 点击了启动item，开始启动 ～～
+2019-10-12 15:15:33,771     INFO [            mainwindow.py          closeEvent   134] 改变已经保存
+2019-10-12 15:17:46,071     INFO [            mainwindow.py          closeEvent   134] 改变已经保存
+2019-10-12 15:18:54,538     INFO [            mainwindow.py          closeEvent   134] 改变已经保存
+2019-10-12 15:19:46,670     INFO [            mainwindow.py          closeEvent   134] 改变已经保存
+2019-10-12 15:21:23,167     INFO [            mainwindow.py          closeEvent   139] 改变已经保存
+2019-10-12 15:21:45,598     INFO [            mainwindow.py          closeEvent   139] 改变已经保存
+2019-10-12 15:23:53,287     INFO [           agentLayout.py        modify_agent   111] self.sender().text():  1
+2019-10-12 15:23:53,493     INFO [           agentLayout.py        modify_agent   111] self.sender().text():  11
+2019-10-12 15:23:53,709     INFO [           agentLayout.py        modify_agent   111] self.sender().text():  111
+2019-10-12 15:23:53,925     INFO [           agentLayout.py        modify_agent   111] self.sender().text():  1111
+2019-10-12 15:24:02,920     INFO [            mainwindow.py          closeEvent   137] 改变已经保存
+2019-10-12 15:33:26,251     INFO [            mainwindow.py          closeEvent   137] 改变已经保存
+2019-10-12 15:41:16,701     INFO [            mainwindow.py          closeEvent   137] 改变已经保存

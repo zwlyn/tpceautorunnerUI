@@ -10,18 +10,18 @@ from log import logger
 from app import signalManager
 
 class PlotBox(QWidget):
-# 为什么__init__里面有parent=None，super()里要放自己和self，__init__(parent)
-	def __init__(self, parent=None):
-		super(PlotBox,self).__init__(parent)
-		self.initData()
-		self.initUI()
-		self.initConnect()
 
-	def initData(self):
-		pass
+    def __init__(self, parent=None):
+        super(PlotBox,self).__init__(parent)
+        self.initData()
+        self.initUI()
+        self.initConnect()
 
-	def initUI(self):
-		self.plotBox = QGroupBox('测试图像')
+    def initData(self):
+        pass
+
+    def initUI(self):
+
         layout = QVBoxLayout()
 
         self.plt = plt
@@ -29,13 +29,10 @@ class PlotBox(QWidget):
         self.canvas = FC(self.fig)
         layout.addWidget(self.canvas)
 
+        self.setLayout(layout)
 
-        self.plotBox.setLayout(layout)
-
-	def initConnect(self):
-		pass
-
-plotBox = PlotBox()
+    def initConnect(self):
+        pass
 
     def handlePlot(self):
         logger.info('handlePlot')

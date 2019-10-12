@@ -1,71 +1,26 @@
 {
+    "customer": 5000,
+    "initialdays": 300,
+    "scalefactor": 500,
     "uptime": 0,
     "testtime": 1440,
-    "customer": 50,
-    "initialdays": 300,
     "dbconfig": {
-        "dbname": "tpcetest",
         "ip": "192.168.3.100",
-        "password": "tpce5",
-        "dbtype": "oracle",
+        "port": 1521,
         "username": "tpce5",
-        "port": 1521
+        "password": "tpce5",
+        "dbname": "tpcetest",
+        "dbtype": "oracle"
     },
     "agents": [
         {
             "ip": "192.168.3.58",
-            "delay": 11,
-            "startid": 1,
-            "concurrency": 3,
-            "instance": 1,
             "port": 4290,
-            "endid": 5000
-        },
-        {
-            "ip": "111",
-            "port": 11,
-            "concurrency": 613,
-            "instance": 22,
-            "startid": 22,
-            "endid": 22,
-            "delay": 29
-        },
-        {
-            "ip": "",
-            "port": "",
-            "concurrency": "",
-            "instance": "",
-            "startid": "",
-            "endid": "",
-            "delay": ""
-        },
-        {
-            "ip": "1",
-            "port": 1,
             "concurrency": 1,
             "instance": 1,
             "startid": 1,
-            "endid": 1,
-            "delay": 1
-        },
-        {
-            "ip": "",
-            "port": "",
-            "concurrency": "",
-            "instance": "",
-            "startid": "",
-            "endid": "",
-            "delay": ""
-        },
-        {
-            "ip": "",
-            "port": "",
-            "concurrency": "",
-            "instance": "",
-            "startid": "",
-            "endid": "",
-            "delay": ""
+            "endid": 5000,
+            "delay": 0
         }
-    ],
-    "scalefactor": 500
+    ]
 }

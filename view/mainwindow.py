@@ -16,8 +16,8 @@ import random
 from log import logger
 #from TPCEAutoRunner import tpceautorunner, TwoHouerTradeResultJob
 from threading import Thread
-from .plotBox import plotBox
-from .settingBox import settingBox
+from .plotBox import PlotBox
+from .settingBox import SettingBox
 from log import logger
 from app import signalManager
 
@@ -32,7 +32,6 @@ class TPCEAutoRunnerUI(QDialog):  # 需要研究example 之后使用QMainWindows
 
     def initData(self):
         pass
-
 
     def initUI(self):
         self.setGeometry(200,100,1280,780)
@@ -57,20 +56,22 @@ class TPCEAutoRunnerUI(QDialog):  # 需要研究example 之后使用QMainWindows
                                      "QListWidget::Item[0]{color:rgb(255,0,0);border:0px solid gray;}"
                                     )
 
-        self.reportBox=QGroupBox()
-
-        self.configBox_list = list()
+        self.reportBox = QGroupBox()
+        self.plotBox = PlotBox()
+        
+        self.settingBox = SettingBox()
+        self.settingBox.resize(1220, 700)
+        self.settingBox.setFixedSize(1220, 700)
 
         self.init_reportBox()
 
+        self.stack = QStackedWidget(self)
 
-        self.stack=QStackedWidget(self)
+        self.stack.addWidget(self.settingBox)
+        self.stack.addWidget(self.plotBox)
+        self.stack.addWidget(self.reportBox)
 
-        self.stack.addWidget(settingBox)
-        self.stack.addWidget(plotBox)
-        self.stack.addWidget(reportBox)
-
-        mainLayout =QVBoxLayout()
+        mainLayout = QVBoxLayout()
 
         menuBar = QMenuBar()
         menu = menuBar.addMenu('logo')
@@ -103,10 +104,6 @@ class TPCEAutoRunnerUI(QDialog):  # 需要研究example 之后使用QMainWindows
         self.timer.timeout.connect(self.save_date)
         self.timer.start(3000)
 
-
-
-
-
     def init_reportBox(self):
         layout = QHBoxLayout()
         tab_list = QTabWidget()
@@ -127,10 +124,11 @@ class TPCEAutoRunnerUI(QDialog):  # 需要研究example 之后使用QMainWindows
         self.reportBox.setLayout(layout)
         
     def save_date(self):
-        with open('start.json', 'w') as f:
-            f.write(json.dumps(self.start_map, indent=4))
-        with open('config.json', 'w') as f:
-            f.write(json.dumps(self.config_map, indent=4))
+        pass
+        # with open('start.json', 'w') as f:
+        #     f.write(json.dumps(self.start_map, indent=4))
+        # with open('config.json', 'w') as f:
+        #     f.write(json.dumps(self.config_map, indent=4))
 
     # 关闭窗口时会执行累的close方法，并触发QCloseEvent信号，进而执行closeEvent(self,QCloseEvent)方法
     def closeEvent(self, event):
@@ -192,9 +190,6 @@ class TPCEAutoRunnerUI(QDialog):  # 需要研究example 之后使用QMainWindows
     #             logger.error(repr(e))
 
 
-    app=QApplication(sys.argv)
-    demo=TPCEAutoRunnerUI()
-    sys.exit(app.exec_())
-    
+
 
 

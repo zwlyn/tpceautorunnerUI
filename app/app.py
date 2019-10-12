@@ -18,14 +18,14 @@ class TpceApp(object):
 		self.tpceautorunnerUI = TPCEAutoRunnerUI()
 
 	def initControllers(self):
-		
-		self.acontroller = AController()
-		self.bcontroller = BController()
-		self.ccontroller = CController()
+		pass		
+		# self.acontroller = AController()
+		# self.bcontroller = BController()
+		# self.ccontroller = CController()
 
-		logger.info(self.acontroller)
-		logger.info(self.bcontroller)
-		logger.info(self.ccontroller)
+		# logger.info(self.acontroller)
+		# logger.info(self.bcontroller)
+		# logger.info(self.ccontroller)
 
 	def initConnect(self):
 		pass
