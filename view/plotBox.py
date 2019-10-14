@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 # -*- coding-utf_8 -*-
+import os
 import time
+import traceback
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
@@ -10,6 +12,7 @@ from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FC
 from log import logger
 from app import signalManager
 from threading import Thread
+from controller import tpceautorunner, TwoHouerTradeResultJob
 
 class PlotBox(QWidget):
 
@@ -23,7 +26,6 @@ class PlotBox(QWidget):
         pass
 
     def initUI(self):
-
         layout = QVBoxLayout()
 
         self.plt = plt
@@ -41,25 +43,15 @@ class PlotBox(QWidget):
         poltThread = Thread(target = self.handlePlot)
         poltThread.start()
 
-    def handlePlot(self):
-        logger.info('handlePlot')
-        self.times = [1,2,3]
-        self.tpsEs = [1,2,3]
-        i = 1
-        while True: # ------------
-
-            _minCount = min(len(self.times), len(self.tpsEs))
-            minCount  =  _minCount
-            self.plot(self.times[0:minCount], self.tpsEs[0:minCount])
-
-            #plt.pause(3)  #暂停一秒
-            plt.ioff()
-            logger.info(u'绘图更新成功！')
-            time.sleep(3)
-            self.times.append(i)
-            self.tpsEs.append(i*i + 2)
-            i += 1
-
+    def plot(self, xData, yData):
+        self.plt.clf()
+        self.plt.title("Test Run Graph")
+        self.plt.xlabel("Elapsed Time in Minutes")
+        self.plt.ylabel("Trade-Result Transcations Per Second")
+        self.plt.plot(xData, yData)
+        self.canvas.draw()  # 在pyqt上的图像:从这里开始绘制
+        self.plt.axis([min(xData), max(xData), min(yData), max(yData) + 2])
+        self.plt.ioff()
 
     def drawLine(self, linePoint, textPoint , text, color="Blue"):
         '''
@@ -93,18 +85,6 @@ class PlotBox(QWidget):
         plt.text(arrowPoint[0], arrowPoint[1] - height - 0.2, "%s" % text, ha = "center", va = "center", size = 10,
         bbox = bbox_props)
 
-
-    def plot(self, xData, yData):
-        self.plt.clf()
-        self.plt.title("Test Run Graph")
-        self.plt.xlabel("Elapsed Time in Minutes")
-        self.plt.ylabel("Trade-Result Transcations Per Second")
-        self.plt.plot(xData, yData)
-        self.canvas.draw()  # 在pyqt上的图像:从这里开始绘制
-        self.plt.axis([min(xData), max(xData), min(yData), max(yData) + 2])
-        self.plt.ioff()
-
-
     def drawMIStartEnd(self, job):
         self.drawLine((job.rampuptime(), job.tpsE() + 1), (job.rampuptime(), job.tpsE() + 1.5), "Begin Steady State")
         self.drawLine((job.MIEnd() + 10, job.tpsE() + 1), (job.MIEnd() + 10, job.tpsE() + 1.5), "End Steady State")
@@ -117,32 +97,53 @@ class PlotBox(QWidget):
     def savefig(self, path):
         self.plt.savefig(path)
 
+    def handlePlot(self):
+        def actionShot():
+            self.lastPng = os.sep.join([tpceautorunner.paths["screenshots"], tpceautorunner.resultName(int(tpceautorunner.lastResultTime), "jpg")])
+            plt.savefig(self.lastPng)
+            logger.info(u'截图%s保存成功！' % self.lastPng)
+
+        while not tpceautorunner.isFinished:
+            try:
+                if tpceautorunner.isStarted and tpceautorunner.isGetResultSuccessed:
+                    _minCount = min(len(tpceautorunner.times),len(tpceautorunner.tpsEs))
+                    minCount  =  _minCount
+                    self.plot(tpceautorunner.times[0:minCount], tpceautorunner.tpsEs[0:minCount])
+                    job = TwoHouerTradeResultJob.BestJob
+                    if job:
+                        self.drawMIStartEnd(job)
+
+                    # plt.pause(int(self.config_map['resultTime']))  #暂停一秒
+                    plt.ioff()
+                    logger.info(u'绘图更新成功！')
+                    if  len(tpceautorunner.tpsEs) > 0:
+                        actionShot()
+
+                    if tpceautorunner.isFinished:
+                        actionShot()
+                time.sleep(1)
+
+            except Exception as e:
+                logger.error(traceback.format_exc(e))
+                logger.error(u'绘图更新失败')
+                logger.error(repr(e))
+
+
     # def handlePlot(self):
-    #     def actionShot():
-    #         self.lastPng = os.sep.join([tpceautorunner.paths["screenshots"], tpceautorunner.resultName(int(tpceautorunner.lastResultTime), "jpg")])
-    #         plt.savefig(self.lastPng)
-    #         logger.info(u'截图%s保存成功！' % self.lastPng)
-
+    #     logger.info('handlePlot')
+    #     self.times = [1,2,3]
+    #     self.tpsEs = [1,2,3]
+    #     i = 1
     #     while True: # ------------
-    #         try:
-    #             if tpceautorunner.isStarted and tpceautorunner.isGetResultSuccessed:
-    #                 _minCount = min(len(tpceautorunner.times),len(tpceautorunner.tpsEs))
-    #                 minCount  =  _minCount
-    #                 self.plot(tpceautorunner.times[0:minCount], tpceautorunner.tpsEs[0:minCount])
-    #                 job = TwoHouerTradeResultJob.BestJob
-    #                 if job:
-    #                     self.drawMIStartEnd(job)
 
-    #                 plt.pause(int(self.config_map['resultTime']))  #暂停一秒
-    #                 plt.ioff()
-    #                 logger.info(u'绘图更新成功！')
-    #                 if  len(tpceautorunner.tpsEs) > 0:
-    #                     actionShot()
+    #         _minCount = min(len(self.times), len(self.tpsEs))
+    #         minCount  =  _minCount
+    #         self.plot(self.times[0:minCount], self.tpsEs[0:minCount])
 
-    #                 if is_exit:
-    #                     actionShot()
-
-    #         except Exception as e:
-    #             logger.error(traceback.format_exc(e))
-    #             logger.error(u'绘图更新失败')
-    #             logger.error(repr(e))
+    #         #plt.pause(3)  #暂停一秒
+    #         plt.ioff()
+    #         logger.info(u'绘图更新成功！')
+    #         time.sleep(1)
+    #         self.times.append(i)
+    #         self.tpsEs.append(i*i + 2)
+    #         i += 1

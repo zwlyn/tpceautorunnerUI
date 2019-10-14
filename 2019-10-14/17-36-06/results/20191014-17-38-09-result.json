@@ -1,0 +1,256 @@
+{
+    "data": {
+        "agents": [
+            {
+                "response": {
+                    "TradeResult": null,
+                    "data": {
+                        "url": "http://192.168.3.58:4290/api/v1/tpce/result?MIEnd=0&MIStart=0"
+                    },
+                    "message": "success.",
+                    "result": {
+                        "BUSINESSRECOVERYTIME": "",
+                        "MEASUREMENTINTERVAL": "24:0:0",
+                        "RAMPUPTIME": "0:0:0",
+                        "TEST_DATA": [
+                            {
+                                "T_90": "0.000000",
+                                "T_AVG": "0.000000",
+                                "T_COUNT": "0",
+                                "T_FAILED_COUNT": "0",
+                                "T_MAX": "0.000000",
+                                "T_MIN": "0.000000",
+                                "T_NAME": "BrokerVolume",
+                                "T_PER": ""
+                            },
+                            {
+                                "T_90": "0.000000",
+                                "T_AVG": "0.000000",
+                                "T_COUNT": "0",
+                                "T_FAILED_COUNT": "0",
+                                "T_MAX": "0.000000",
+                                "T_MIN": "0.000000",
+                                "T_NAME": "CustomerPosition",
+                                "T_PER": ""
+                            },
+                            {
+                                "T_90": "0.000000",
+                                "T_AVG": "0.000000",
+                                "T_COUNT": "0",
+                                "T_FAILED_COUNT": "0",
+                                "T_MAX": "0.000000",
+                                "T_MIN": "0.000000",
+                                "T_NAME": "MarketFeed",
+                                "T_PER": ""
+                            },
+                            {
+                                "T_90": "0.000000",
+                                "T_AVG": "0.000000",
+                                "T_COUNT": "0",
+                                "T_FAILED_COUNT": "0",
+                                "T_MAX": "0.000000",
+                                "T_MIN": "0.000000",
+                                "T_NAME": "MarketWatch",
+                                "T_PER": ""
+                            },
+                            {
+                                "T_90": "0.000000",
+                                "T_AVG": "0.000000",
+                                "T_COUNT": "0",
+                                "T_FAILED_COUNT": "0",
+                                "T_MAX": "0.000000",
+                                "T_MIN": "0.000000",
+                                "T_NAME": "SecurityDetail",
+                                "T_PER": ""
+                            },
+                            {
+                                "T_90": "0.000000",
+                                "T_AVG": "0.000000",
+                                "T_COUNT": "0",
+                                "T_FAILED_COUNT": "0",
+                                "T_MAX": "0.000000",
+                                "T_MIN": "0.000000",
+                                "T_NAME": "TradeLookup",
+                                "T_PER": ""
+                            },
+                            {
+                                "T_90": "0.000000",
+                                "T_AVG": "0.000000",
+                                "T_COUNT": "0",
+                                "T_FAILED_COUNT": "0",
+                                "T_MAX": "0.000000",
+                                "T_MIN": "0.000000",
+                                "T_NAME": "TradeOrder",
+                                "T_PER": ""
+                            },
+                            {
+                                "T_90": "0.000000",
+                                "T_AVG": "0.000000",
+                                "T_COUNT": "0",
+                                "T_FAILED_COUNT": "0",
+                                "T_MAX": "0.000000",
+                                "T_MIN": "0.000000",
+                                "T_NAME": "TradeResult",
+                                "T_PER": ""
+                            },
+                            {
+                                "T_90": "0.000000",
+                                "T_AVG": "0.000000",
+                                "T_COUNT": "0",
+                                "T_FAILED_COUNT": "0",
+                                "T_MAX": "0.000000",
+                                "T_MIN": "0.000000",
+                                "T_NAME": "TradeStatus",
+                                "T_PER": ""
+                            },
+                            {
+                                "T_90": "0.000000",
+                                "T_AVG": "0.000000",
+                                "T_COUNT": "0",
+                                "T_FAILED_COUNT": "0",
+                                "T_MAX": "0.000000",
+                                "T_MIN": "0.000000",
+                                "T_NAME": "TradeUpdate",
+                                "T_PER": ""
+                            },
+                            {
+                                "T_90": "0.000000",
+                                "T_AVG": "0.000000",
+                                "T_COUNT": "0",
+                                "T_FAILED_COUNT": "0",
+                                "T_MAX": "0.000000",
+                                "T_MIN": "0.000000",
+                                "T_NAME": "DataMaintenance",
+                                "T_PER": ""
+                            }
+                        ],
+                        "TIMESPAN": 58.277164779
+                    },
+                    "retcode": 0
+                }
+            }
+        ]
+    },
+    "message": "success",
+    "result": {
+        "BUSINESSRECOVERYTIME": "0:0:0",
+        "MEASUREMENTINTERVAL": "24:0:0",
+        "RAMPUPTIME": "0:0:0",
+        "TEST_DATA": [
+            {
+                "T_90": "0.00",
+                "T_AVG": "0.00",
+                "T_COUNT": "0",
+                "T_FAILED_COUNT": "0",
+                "T_MAX": "0.00",
+                "T_MIN": "0.00",
+                "T_NAME": "BrokerVolume",
+                "T_PER": "0.0000"
+            },
+            {
+                "T_90": "0.00",
+                "T_AVG": "0.00",
+                "T_COUNT": "0",
+                "T_FAILED_COUNT": "0",
+                "T_MAX": "0.00",
+                "T_MIN": "0.00",
+                "T_NAME": "CustomerPosition",
+                "T_PER": "0.0000"
+            },
+            {
+                "T_90": "0.00",
+                "T_AVG": "0.00",
+                "T_COUNT": "0",
+                "T_FAILED_COUNT": "0",
+                "T_MAX": "0.00",
+                "T_MIN": "0.00",
+                "T_NAME": "MarketFeed",
+                "T_PER": "0.0000"
+            },
+            {
+                "T_90": "0.00",
+                "T_AVG": "0.00",
+                "T_COUNT": "0",
+                "T_FAILED_COUNT": "0",
+                "T_MAX": "0.00",
+                "T_MIN": "0.00",
+                "T_NAME": "MarketWatch",
+                "T_PER": "0.0000"
+            },
+            {
+                "T_90": "0.00",
+                "T_AVG": "0.00",
+                "T_COUNT": "0",
+                "T_FAILED_COUNT": "0",
+                "T_MAX": "0.00",
+                "T_MIN": "0.00",
+                "T_NAME": "SecurityDetail",
+                "T_PER": "0.0000"
+            },
+            {
+                "T_90": "0.00",
+                "T_AVG": "0.00",
+                "T_COUNT": "0",
+                "T_FAILED_COUNT": "0",
+                "T_MAX": "0.00",
+                "T_MIN": "0.00",
+                "T_NAME": "TradeLookup",
+                "T_PER": "0.0000"
+            },
+            {
+                "T_90": "0.00",
+                "T_AVG": "0.00",
+                "T_COUNT": "0",
+                "T_FAILED_COUNT": "0",
+                "T_MAX": "0.00",
+                "T_MIN": "0.00",
+                "T_NAME": "TradeOrder",
+                "T_PER": "0.0000"
+            },
+            {
+                "T_90": "0.00",
+                "T_AVG": "0.00",
+                "T_COUNT": "0",
+                "T_FAILED_COUNT": "0",
+                "T_MAX": "0.00",
+                "T_MIN": "0.00",
+                "T_NAME": "TradeResult",
+                "T_PER": "0.0000"
+            },
+            {
+                "T_90": "0.00",
+                "T_AVG": "0.00",
+                "T_COUNT": "0",
+                "T_FAILED_COUNT": "0",
+                "T_MAX": "0.00",
+                "T_MIN": "0.00",
+                "T_NAME": "TradeStatus",
+                "T_PER": "0.0000"
+            },
+            {
+                "T_90": "0.00",
+                "T_AVG": "0.00",
+                "T_COUNT": "0",
+                "T_FAILED_COUNT": "0",
+                "T_MAX": "0.00",
+                "T_MIN": "0.00",
+                "T_NAME": "TradeUpdate",
+                "T_PER": "0.0000"
+            },
+            {
+                "T_90": "0.00",
+                "T_AVG": "0.00",
+                "T_COUNT": "0",
+                "T_FAILED_COUNT": "0",
+                "T_MAX": "0.00",
+                "T_MIN": "0.00",
+                "T_NAME": "DataMaintenance",
+                "T_PER": "0.0000"
+            }
+        ],
+        "TIMESPAN": 58.277164779,
+        "TradeResult": [],
+        "tpsE": 0.0
+    },
+    "retcode": 0
+}

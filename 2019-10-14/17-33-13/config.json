@@ -1,6 +1,6 @@
 {
     "ip": "192.168.3.58",
-    "dingdingTime": 60,
+    "dingdingTime": 6,
     "mapBedUrl": "http://39.97.226.213:18800/upload",
     "errorTime": 600,
     "dingdingUrl": [

@@ -5,7 +5,7 @@ from PyQt5.QtCore import *
 
 class SignalManager(QObject):
 
-    startTest = pyqtSignal() 
+    startTest = pyqtSignal()
 
     startArgsChanged = pyqtSignal(dict)
 

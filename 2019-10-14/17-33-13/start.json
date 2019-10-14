@@ -1,5 +1,5 @@
 {
-    "customer": 5000,
+    "customer": 500011,
     "initialdays": 300,
     "scalefactor": 500,
     "uptime": 0,
@@ -21,6 +21,24 @@
             "startid": 1,
             "endid": 5000,
             "delay": 0
+        },
+        {
+            "ip": "2",
+            "port": 2,
+            "concurrency": 2,
+            "instance": 2,
+            "startid": 2,
+            "endid": 2,
+            "delay": 2
+        },
+        {
+            "ip": "3",
+            "port": 3,
+            "concurrency": 3,
+            "instance": 3,
+            "startid": 3,
+            "endid": 3,
+            "delay": 3
         }
     ]
 }

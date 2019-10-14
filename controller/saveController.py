@@ -37,6 +37,3 @@ class SaveController(object):
         with open('config.json', 'w') as f:
             f.write(json.dumps(self.config_map, indent=4))
 
-
-
-
