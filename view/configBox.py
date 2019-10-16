@@ -7,6 +7,14 @@ from PyQt5.QtCore import *
 from log import logger
 from app import signalManager
 
+class QLineEdit_int(QLineEdit):
+    '''
+    重定义只用于int类型输入的行输入框
+    '''
+    def __init__(self):
+        super().__init__()
+        self.setValidator(QIntValidator())
+
 def load_json(fpath):
     with open(fpath,'r', encoding='utf-8') as f:
         dict_data = json.loads(f.read())
@@ -24,12 +32,12 @@ class ConfigBox(QWidget):
         self.config_map = load_json('config.json')
         self.configArgs = {
         'ip': QLineEdit(),
-        'port': QLineEdit(),
+        'port': QLineEdit_int(),
         'mapBedUrl': QLineEdit(),
         'dingdingUrl': QLineEdit(),
-        'dingdingTime': QLineEdit(),
-        'resultTime': QLineEdit(),
-        'errorTime': QLineEdit(),
+        'dingdingTime': QLineEdit_int(),
+        'resultTime': QLineEdit_int(),
+        'errorTime': QLineEdit_int(),
         'reportLanguage': QLineEdit()
         }
 
@@ -77,10 +85,9 @@ class ConfigBox(QWidget):
         self.config_map['mapBedUrl'] = self.configArgs['mapBedUrl'].text()
         self.config_map['reportLanguage'] = self.configArgs['reportLanguage'].text()
         self.config_map['dingdingUrl'][0] = self.configArgs['dingdingUrl'].text()
-        if self.sender().text() != '':
-            self.config_map['port'] = int(self.configArgs['port'].text())      
-            self.config_map['dingdingTime'] = int(self.configArgs['dingdingTime'].text())
-            self.config_map['resultTime'] = int(self.configArgs['resultTime'].text())
-            self.config_map['errorTime'] = int(self.configArgs['errorTime'].text())
+        self.config_map['port'] = int(self.configArgs['port'].text())     
+        self.config_map['dingdingTime'] = int(self.configArgs['dingdingTime'].text())
+        self.config_map['resultTime'] = int(self.configArgs['resultTime'].text())
+        self.config_map['errorTime'] = int(self.configArgs['errorTime'].text())
 
         signalManager.configArgsChanged.emit(self.config_map)

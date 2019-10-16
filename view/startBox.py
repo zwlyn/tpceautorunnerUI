@@ -8,6 +8,14 @@ from PyQt5.QtCore import *
 from app import signalManager
 from .agentBox import AgentBox
 
+class QLineEdit_int(QLineEdit):
+    '''
+    重定义只用于int类型输入的行输入框
+    '''
+    def __init__(self):
+        super().__init__()
+        self.setValidator(QIntValidator())
+        
 def load_json(fpath):
     with open(fpath,'r', encoding='utf-8') as f:
         dict_data = json.loads(f.read())
@@ -24,15 +32,15 @@ class StartBox(QWidget):
     def initData(self):
         self.start_map = load_json('start.json')
         self.startArgs = {
-        'customer': QLineEdit(),
-        'initialdays': QLineEdit(),
-        'scalefactor': QLineEdit(),
-        'uptime': QLineEdit(),
-        'testtime': QLineEdit(),
+        'customer': QLineEdit_int(),
+        'initialdays': QLineEdit_int(),
+        'scalefactor': QLineEdit_int(),
+        'uptime': QLineEdit_int(),
+        'testtime': QLineEdit_int(),
         'dbconfig':{
             'ip': QLineEdit(),
             'dbname': QLineEdit(),
-            'port': QLineEdit(),
+            'port': QLineEdit_int(),
             'username': QLineEdit(),
             'dbtype': QLineEdit(),
             'password': QLineEdit(),

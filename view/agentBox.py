@@ -7,6 +7,13 @@ from PyQt5.QtCore import *
 from log import logger
 from app import signalManager
 
+class QLineEdit_int(QLineEdit):
+	'''
+	重定义只用于int类型输入的行输入框
+	'''
+	def __init__(self):
+		super().__init__()
+		self.setValidator(QIntValidator())
 
 def load_json(fpath):
     with open(fpath,'r', encoding='utf-8') as f:
@@ -25,12 +32,12 @@ class AgentBox(QWidget):
 		self.start_map = load_json('start.json')
 		self.agentArgs = {
 		"ip": QLineEdit(),
-		"port": QLineEdit(),
-		"concurrency": QLineEdit(),
-		"instance": QLineEdit(),
-		"startid": QLineEdit(),
-		"endid": QLineEdit(),
-		"delay": QLineEdit()
+		"port": QLineEdit_int(),
+		"concurrency": QLineEdit_int(),
+		"instance": QLineEdit_int(),
+		"startid": QLineEdit_int(),
+		"endid": QLineEdit_int(),
+		"delay": QLineEdit_int()
 		}
 
 	def initUI(self):
@@ -109,26 +116,22 @@ class AgentBox(QWidget):
 			self.listAgent.takeItem(agentid)
 			self.start_map['agents'].pop()
 
+			signalManager.startArgsChanged.emit(self.start_map)
+
 	def modify_agent(self):
 		logger.info('self.sender().text():  ' + self.sender().text())
 		currentItem = self.listAgent.currentItem()
 		agentid = int(currentItem.text()[5:]) -1
+
 		self.start_map['agents'][agentid]['ip'] = self.agentArgs['ip'].text()
+		self.start_map['agents'][agentid]['port'] = int(self.agentArgs['port'].text())
+		self.start_map['agents'][agentid]['concurrency'] = int(self.agentArgs['concurrency'].text())
+		self.start_map['agents'][agentid]['instance'] = int(self.agentArgs['instance'].text())
+		self.start_map['agents'][agentid]['startid'] = int(self.agentArgs['startid'].text())
+		self.start_map['agents'][agentid]['endid'] = int(self.agentArgs['endid'].text())
+		self.start_map['agents'][agentid]['delay'] = int(self.agentArgs['delay'].text())
 
-		if self.agentArgs['port'].text() != "":
-			self.start_map['agents'][agentid]['port'] = int(self.agentArgs['port'].text())
-		if self.agentArgs['concurrency'].text() != "":
-			self.start_map['agents'][agentid]['concurrency'] = int(self.agentArgs['concurrency'].text())
-		if self.agentArgs['instance'].text() != "":
-			self.start_map['agents'][agentid]['instance'] = int(self.agentArgs['instance'].text())
-		if self.agentArgs['startid'].text() != "":
-			self.start_map['agents'][agentid]['startid'] = int(self.agentArgs['startid'].text())
-		if self.agentArgs['endid'].text() != "":
-			self.start_map['agents'][agentid]['endid'] = int(self.agentArgs['endid'].text())
-		if self.agentArgs['delay'].text() != "":
-			self.start_map['agents'][agentid]['delay'] = int(self.agentArgs['delay'].text())
-
-			signalManager.startArgsChanged.emit(self.start_map)
+		signalManager.startArgsChanged.emit(self.start_map)
 
 	def select_agent(self, item):
 

@@ -13,7 +13,6 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 
 from log import logger
-#from TPCEAutoRunner import tpceautorunner, TwoHouerTradeResultJob
 from .plotBox import PlotBox
 from .settingBox import SettingBox
 from log import logger

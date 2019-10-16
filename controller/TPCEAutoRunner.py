@@ -895,7 +895,7 @@ class TPCEAutoRunner(object):
         global is_exit
         self.initData()
         self.handleStart()
-        self.startTest()
+        #self.startTest()
         resultThread = Thread(target = self.handleResult)
         reportThread = Thread(target = self.handleReport)
         resultThread.start()

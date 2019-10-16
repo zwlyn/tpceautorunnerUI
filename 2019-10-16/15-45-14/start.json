@@ -1,0 +1,26 @@
+{
+    "customer": 5000,
+    "initialdays": 300,
+    "scalefactor": 500,
+    "uptime": 0,
+    "testtime": 1440,
+    "dbconfig": {
+        "ip": "192.168.3.100",
+        "port": 1521,
+        "username": "tpce5",
+        "password": "tpce5",
+        "dbname": "tpcetest",
+        "dbtype": "oracle"
+    },
+    "agents": [
+        {
+            "ip": "192.168.3.58",
+            "port": 4290,
+            "concurrency": 1,
+            "instance": 1,
+            "startid": 1,
+            "endid": 5000,
+            "delay": 0
+        }
+    ]
+}

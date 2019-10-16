@@ -1449,17 +1449,17 @@ class TPCEAutoRunner(object):
         global is_exit
         self.initData()
         self.handleStart()
-        self.startTest()
+        #self.startTest()
         poltThread = Thread(target = self.handlePlot)
         poltThread.start()
         resultThread = Thread(target = self.handleResult)
         reportThread = Thread(target = self.handleReport)
         resultThread.start()
         reportThread.start()
-        # poltThread.join()
-        # resultThread.join()
-        # reportThread.join()
-        #self.handleFinished()
+        poltThread.join()
+        resultThread.join()
+        reportThread.join()
+        self.handleFinished()
 
 
 def handler(signum, frame):
@@ -1472,9 +1472,9 @@ if __name__  ==  '__main__':
     demo=TPCEAutoRunnerUI()
     sys.exit(app.exec_())
 
-    # signal.signal(signal.SIGINT, handler)
-    # signal.signal(signal.SIGTERM, handler)
-    # d = TPCEAutoRunner()
-    # d.run()
+    signal.signal(signal.SIGINT, handler)
+    signal.signal(signal.SIGTERM, handler)
+    d = TPCEAutoRunner()
+    d.run()
 
 
